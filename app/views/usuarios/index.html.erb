@@ -2,7 +2,7 @@
 
 <h1>Usuarios</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Nombres</th>
@@ -12,7 +12,7 @@
       <th>Login</th>
       <th>Password</th>
       <th>Email</th>
-      <th colspan="3"></th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
@@ -26,9 +26,9 @@
         <td><%= usuario.login %></td>
         <td><%= usuario.password %></td>
         <td><%= usuario.email %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', usuario,:class => "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_usuario_path(usuario), :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', usuario, method: :delete, data: {confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -2,13 +2,13 @@
 
 <h1>Prestamos</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Fecha</th>
       <th>Estado</th>
       <th>Usuario</th>
-      <th colspan="3"></th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
@@ -18,9 +18,9 @@
         <td><%= prestamo.fecha %></td>
         <td><%= prestamo.estado %></td>
         <td><%= prestamo.Usuario.id.to_s+" - "+prestamo.Usuario.nombres+" "+prestamo.Usuario.apellidos %></td>
-        <td><%= link_to 'Show', prestamo %></td>
-        <td><%= link_to 'Edit', edit_prestamo_path(prestamo) %></td>
-        <td><%= link_to 'Destroy', prestamo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', prestamo,:class => "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_prestamo_path(prestamo), :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', prestamo, method: :delete, data: {confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

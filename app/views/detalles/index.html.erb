@@ -17,7 +17,7 @@
       <tr>
         <td><%= detalle.cantidad %></td>
         <td><%= detalle.Libro.id.to_s+" - "+detalle.Libro.titulo %></td>
-        <td><%= detalle.Prestamo_id %></td>
+        <td><%= detalle.Prestamo.fecha %></td>
         <td><%= link_to 'Show', detalle,:class => "btn btn-info" %></td>
         <td><%= link_to 'Edit', edit_detalle_path(detalle), :class => "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', detalle, method: :delete, data: {confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
